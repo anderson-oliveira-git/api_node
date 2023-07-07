@@ -4,7 +4,7 @@ require('dotenv').config({
     path: __dirname + '/./../.env'
 });
 
-const app = express();
+const app  = express();
 const port = process.env.SERVER_PORT || 8000;
 
 app.use(express.json());
