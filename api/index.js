@@ -7,14 +7,10 @@ require('dotenv').config({
 const app = express();
 const port = process.env.SERVER_PORT || 8000;
 
-const urls = {
-    index: '/'
-};
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get(urls.index, (req, res) => {
+app.get('/', (req, res) => {
     return res.status(200)
     .json({
         message: 'API working...'
@@ -24,5 +20,3 @@ app.get(urls.index, (req, res) => {
 app.listen(port, () => {
     console.log('Server running: http://localhost:' + port);
 });
-
-module.exports = app;
