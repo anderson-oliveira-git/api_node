@@ -14,7 +14,7 @@ Esse projeto é uma prática do curso de api utilizando node da Alura. O projeto
 ## configuração das variáveis de ambiente 
 ```
 # serve configs .:.
-SERVER_PORT
+SERVER_PORT = # porta que o servidor usará
 
 # database connection config .:.
 DB_USERNAME = # o nome de usuário do seu banco de dados
