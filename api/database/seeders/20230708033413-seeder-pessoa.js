@@ -4,88 +4,56 @@
  * @type {import('sequelize-cli').Migration} 
  */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up (queryInterface, _) {
     await queryInterface.bulkInsert('pessoas', [
       {
-        nome: 'João',
-        ativo: true,
-        email: 'joao@example.com',
-        role: 'administrador',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Maria',
-        ativo: false,
-        email: 'maria@example.com',
-        role: 'usuário',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Pedro',
-        ativo: true,
-        email: 'pedro@example.com',
-        role: 'usuário',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Ana',
-        ativo: true,
-        email: 'ana@example.com',
-        role: 'usuário',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Lucas',
-        ativo: true,
-        email: 'lucas@example.com',
-        role: 'administrador',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Mariana',
-        ativo: false,
-        email: 'mariana@example.com',
-        role: 'usuário',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Gabriel',
-        ativo: true,
-        email: 'gabriel@example.com',
-        role: 'usuário',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Carolina',
-        ativo: true,
-        email: 'carolina@example.com',
-        role: 'administrador',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Rafaela',
-        ativo: false,
-        email: 'rafaela@example.com',
-        role: 'usuário',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        nome: 'Fernando',
-        ativo: true,
-        email: 'fernando@example.com',
-        role: 'usuário',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      }
+				nome: 'Ana Souza',
+				ativo: true,
+				email: 'ana@ana.com',
+				role: 'estudante',
+				createdAt: new Date(),
+				updatedAt: new Date()
+			},
+			{
+				nome: 'Marcos Cintra',
+				ativo: true,
+				email: 'marcos@marcos.com',
+				role: 'estudante',
+				createdAt: new Date(),
+				updatedAt: new Date()
+			},
+			{
+				nome: 'Felipe Cardoso',
+				ativo: true,
+				email: 'felipe@felipe.com',
+				role: 'estudante',
+				createdAt: new Date(),
+				updatedAt: new Date()
+			},
+			{
+				nome: 'Sandra Gomes',
+				ativo: false,
+				email: 'sandra@sandra.com',
+				role: 'estudante',
+				createdAt: new Date(),
+				updatedAt: new Date()
+			},
+			{
+				nome: 'Paula Morais',
+				ativo: true,
+				email: 'paula@paula.com',
+				role: 'docente',
+				createdAt: new Date(),
+				updatedAt: new Date()
+			},
+			{
+				nome: 'Sergio Lopes',
+				ativo: true,
+				email: 'sergio@sergio.com',
+				role: 'docente',
+				createdAt: new Date(),
+				updatedAt: new Date()
+			}
     ], {});
   },
 
