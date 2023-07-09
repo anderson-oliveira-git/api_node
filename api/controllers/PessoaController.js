@@ -63,6 +63,22 @@ class PessoaController {
       return res.status(500).send(error);
     }
   }
+
+  static async atualizarPessoa (req, res) {
+    const transaction = await models.sequelize.transaction();
+    const pessoaId = req.params.id;
+    try {
+      await Pessoa.update(req.body, { 
+        where: { id: pessoaId } 
+      }, { transaction });
+
+      await transaction.commit();
+    } catch (error) {
+      await transaction.rollback();
+    }
+
+    return res.status(200).send('Pessoa atualizada com sucesso!');
+  }
 }
 
 module.exports = PessoaController;
