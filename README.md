@@ -7,11 +7,11 @@
 # api_node
 Esse projeto é uma prática do curso de api utilizando node da Alura. O projeto é composto por: Express, Sequelize e Mysql.
 
-## instalar todas as dependências do projeto
+## passo 1: instalar todas as dependências do projeto
 ```
   npm install || yarn install
 ```
-## configuração das variáveis de ambiente 
+## passo 2: configuração das variáveis de ambiente 
 ```
 # serve configs .:.
 SERVER_PORT = # porta que será utilizada pelo servidor
@@ -25,4 +25,14 @@ DB_PORT = # a porta que está sendo utilizada. caso não tenha alterado a porta 
 DB_DIALECT = # dialeto utilizado: mysql, postgre, mariadb, sqlite3, tedious e oracledb.
 DB_TIMESTAMPS = # esse valor é apenas true ou false
 DB_TIMEZONE = # valor do fuso horário exemplo: se for menos 3h ficaria assim "-03:00"
+```
+
+## passo 3: Rodar as migrations
+```
+npm run migrate || yarn run migrate
+```
+
+## passo 4: Rodas as seeders
+```
+npm run seed || yarn run seed
 ```
