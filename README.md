@@ -32,7 +32,7 @@ DB_TIMEZONE = # valor do fuso horário exemplo: se for menos 3h ficaria assim "-
 npm run migrate || yarn run migrate
 ```
 
-## passo 4: Rodas as seeders
+## passo 4: Rodar as seeders
 ```
 npm run seed || yarn run seed
 ```
