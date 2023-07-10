@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Nivel',
-    tableName: 'niveis'
+    tableName: 'nivels'
   });
 
   return Nivel;

@@ -8,13 +8,13 @@ const urls = {
   obterPessoa: '/pessoa/:id',
   criarPessoa: '/pessoa/criar',
   deletarPessoa: '/pessoa/delete/:id',
-  atualzarPessoa: '/pessoa/atualizar/:id'
+  atualizarPessoa: '/pessoa/atualizar/:id'
 }
 
 pessoaRoutes.get(urls.index, PessoaController.obterPessoas);
 pessoaRoutes.get(urls.obterPessoa, PessoaController.obterUsuarioPorId);
 pessoaRoutes.post(urls.criarPessoa, PessoaController.criarPessoa);
 pessoaRoutes.delete(urls.deletarPessoa, PessoaController.deletarPessoa);
-pessoaRoutes.put(urls.atualzarPessoa, PessoaController.atualizarPessoa);
+pessoaRoutes.put(urls.atualizarPessoa, PessoaController.atualizarPessoa);
 
 module.exports = pessoaRoutes;
