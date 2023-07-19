@@ -3,18 +3,37 @@ const PessoaController = require('../controllers/PessoaController');
 
 const pessoaRoutes = Router();
 
-const urls = {
-  index: '/pessoas',
-  obterPessoa: '/pessoa/:id',
-  criarPessoa: '/pessoa/criar',
-  deletarPessoa: '/pessoa/delete/:id',
-  atualizarPessoa: '/pessoa/atualizar/:id'
+const urlsPessoa = {
+  index           : '/pessoas',
+  obterPessoa     : '/pessoa/:id',
+  criarPessoa     : '/pessoa/criar',
+  deletarPessoa   : '/pessoa/delete/:id',
+  atualizarPessoa : '/pessoa/atualizar/:id',
 }
 
-pessoaRoutes.get(urls.index, PessoaController.obterPessoas);
-pessoaRoutes.get(urls.obterPessoa, PessoaController.obterUsuarioPorId);
-pessoaRoutes.post(urls.criarPessoa, PessoaController.criarPessoa);
-pessoaRoutes.delete(urls.deletarPessoa, PessoaController.deletarPessoa);
-pessoaRoutes.put(urls.atualizarPessoa, PessoaController.atualizarPessoa);
+pessoaRoutes.get(
+  urlsPessoa.index, 
+  PessoaController.obterPessoas
+);
+
+pessoaRoutes.get(
+  urlsPessoa.obterPessoa, 
+  PessoaController.obterUsuarioPorId
+);
+
+pessoaRoutes.post(
+  urlsPessoa.criarPessoa, 
+  PessoaController.criarPessoa
+);
+
+pessoaRoutes.delete(
+  urlsPessoa.deletarPessoa, 
+  PessoaController.deletarPessoa
+);
+
+pessoaRoutes.put(
+  urlsPessoa.atualizarPessoa, 
+  PessoaController.atualizarPessoa
+);
 
 module.exports = pessoaRoutes;
